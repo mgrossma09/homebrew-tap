@@ -5,20 +5,20 @@
 class Huectl < Formula
   desc "CLI for controlling Philips Hue lights via Hue API v2"
   homepage "https://github.com/mgrossma09/hue-cli"
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.7/huectl_0.0.7_darwin_amd64.tar.gz"
-      sha256 "890233a7649f4bd2070deafc009460bcf7cf542ab21a7d57910ba34a5c561e71"
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.8/huectl_0.0.8_darwin_amd64.tar.gz"
+      sha256 "4128ee9e55abb28d0f7761b7b69a06089a1f85b7b030e1d0a427ec086a14162c"
 
       def install
         bin.install "huectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.7/huectl_0.0.7_darwin_arm64.tar.gz"
-      sha256 "82d75fc7289310f3e8db1d944967d1c9f0bb5c80f9173ef47849ca40827cfb64"
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.8/huectl_0.0.8_darwin_arm64.tar.gz"
+      sha256 "c4406710a167524fb2184fca89a797ce7f8d8ef9b081a30af7f2af40ef15c5ba"
 
       def install
         bin.install "huectl"
@@ -28,15 +28,15 @@ class Huectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.7/huectl_0.0.7_linux_amd64.tar.gz"
-      sha256 "0ee822f3594383bc74a16b419ba7e9544e76828fdfd545fda337d2dec2fb5674"
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.8/huectl_0.0.8_linux_amd64.tar.gz"
+      sha256 "d39380a5fb1d635d8b4d75d18032a667c4ca132632f179a34b80790733a177cf"
       def install
         bin.install "huectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.7/huectl_0.0.7_linux_arm64.tar.gz"
-      sha256 "5c8ad57e1645f8033325e4116fc75d0f2dc403f002aa83dce863c1689a4aeb56"
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.8/huectl_0.0.8_linux_arm64.tar.gz"
+      sha256 "9c488bfd04bfdb4635c3c8ee9f5bc401ce72bf88a91e63fa0d3f79fab36bfb07"
       def install
         bin.install "huectl"
       end
