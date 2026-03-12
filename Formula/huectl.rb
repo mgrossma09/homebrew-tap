@@ -5,22 +5,22 @@
 class Huectl < Formula
   desc "CLI for controlling Philips Hue lights via Hue API v2"
   homepage "https://github.com/mgrossma09/hue-cli"
-  version "0.0.10"
+  version "0.0.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.10/huectl_0.0.10_darwin_amd64.tar.gz"
-      sha256 "8ed4ed841f23a3d4e21d1ae9a3adb1c3ad6e0305acb6b97bf807e020b1c05a11"
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.11/huectl_0.0.11_darwin_amd64.tar.gz"
+      sha256 "7162852968c8b0c19337c3b852d962435dd3c836da53abe3cfc3722d2aed1749"
 
-      def install
+      define_method(:install) do
         bin.install "huectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.10/huectl_0.0.10_darwin_arm64.tar.gz"
-      sha256 "179063f34da687711f52729f4f1c4728de3f8c1ec4dce74b997e46ee97a57f21"
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.11/huectl_0.0.11_darwin_arm64.tar.gz"
+      sha256 "55880a2be108d9df29339f1465d104b4bcab59a3df4d87d32c97d32df8f924f2"
 
-      def install
+      define_method(:install) do
         bin.install "huectl"
       end
     end
@@ -28,16 +28,16 @@ class Huectl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.10/huectl_0.0.10_linux_amd64.tar.gz"
-      sha256 "afbcb398f98890e933b7454db0c4e04da7ac7a7a186c54d757dbcd5842819673"
-      def install
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.11/huectl_0.0.11_linux_amd64.tar.gz"
+      sha256 "607c09522347374294961e71bda6ad95d98404a876fb1e8087767944b8e4d34d"
+      define_method(:install) do
         bin.install "huectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.10/huectl_0.0.10_linux_arm64.tar.gz"
-      sha256 "405053d8d1875fcde80740060e01a7dd858e0ed9b10cb88bcce8e273104cdce6"
-      def install
+      url "https://github.com/mgrossma09/hue-cli/releases/download/v0.0.11/huectl_0.0.11_linux_arm64.tar.gz"
+      sha256 "2e228a74d8db31e1abf706478d141285bf9fbecd4b8f25705c44bb49a85d3853"
+      define_method(:install) do
         bin.install "huectl"
       end
     end
